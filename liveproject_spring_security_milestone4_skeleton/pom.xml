@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.laurentiuspilca</groupId>
-    <artifactId>liveproject_spring_security_milestone2_skeleton</artifactId>
+    <artifactId>liveproject_spring_security_milestone4_skeleton</artifactId>
     <version>1.0.0</version>
-    <name>liveproject_spring_security_milestone2</name>
-    <description>Live Project - Spring Security - Milestone 2 - Implementing the business logic server</description>
+    <name>liveproject_spring_security_milestone4</name>
+    <description>Live Project - Spring Security - Milestone 4 - Implementing the business logic server</description>
 
     <properties>
         <java.version>11</java.version>
