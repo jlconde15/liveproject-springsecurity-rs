@@ -5,6 +5,7 @@ import com.laurentiuspilca.liveproject.entities.HealthProfile;
 import com.laurentiuspilca.liveproject.exceptions.NonExistentHealthProfileException;
 import com.laurentiuspilca.liveproject.repositories.HealthMetricRepository;
 import com.laurentiuspilca.liveproject.repositories.HealthProfileRepository;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -39,6 +40,7 @@ public class HealthMetricService {
     ;
   }
 
+  @PreAuthorize("hasAuthority('admin')")
   public List<HealthMetric> findHealthMetricHistory(String username) {
     return healthMetricRepository.findHealthMetricHistory(username);
   }
