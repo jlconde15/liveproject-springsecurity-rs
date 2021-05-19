@@ -40,6 +40,10 @@ public class HealthMetricService {
     ;
   }
 
+  public List<HealthMetric> findAll() {
+    return healthMetricRepository.findAll();
+  }
+
   @PreAuthorize("hasAuthority('admin')")
   public List<HealthMetric> findHealthMetricHistory(String username) {
     return healthMetricRepository.findHealthMetricHistory(username);

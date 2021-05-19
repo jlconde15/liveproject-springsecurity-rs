@@ -39,6 +39,11 @@ public class HealthMetricController {
     return healthMetricService.findHealthMetricHistory(token.getToken().getClaims().get("user_name").toString());
   }
 
+  @GetMapping
+  public List<HealthMetric> findAll() {
+    return healthMetricService.findAll();
+  }
+
   @DeleteMapping("/{username}")
   public void deleteHealthMetricForUser(@PathVariable String username) {
     healthMetricService.deleteHealthMetricForUser(username);
